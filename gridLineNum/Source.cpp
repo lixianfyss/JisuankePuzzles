@@ -17,9 +17,9 @@ bool reciprocal(int x, int y)
 	if (y == 0) return false;
 	return true;
 }
-int new_line(int x, int y, int &sum_lu, int &sum_ld, int &sum_r)
+unsigned int new_line(int x, int y, unsigned int &sum_lu, unsigned int &sum_ld, unsigned int &sum_r)
 {
-	int t_sum = 0, mark_v = floor(y / 2.0), mark_h = floor((x + 1) / 2.0), border = 0;
+	unsigned int t_sum = 0; int mark_v = floor(y / 2.0), mark_h = floor((x + 1) / 2.0), border = 0;
 	if (y % 2 == 0)
 	{
 		for (int i = 1; i < mark_h; i++)
@@ -31,6 +31,7 @@ int new_line(int x, int y, int &sum_lu, int &sum_ld, int &sum_r)
 		{
 			if (reciprocal(y - 1, i)) sum_r += x - i;	if (reciprocal(y, i)) sum_r += x - i;
 		}
+		sum_lu %= max; sum_ld %= max; sum_r %= max;
 		t_sum = sum_lu + sum_ld + sum_r;
 	}
 	else
@@ -50,18 +51,22 @@ int new_line(int x, int y, int &sum_lu, int &sum_ld, int &sum_r)
 }
 int main()
 {
-	int n, x, y, sum = 0, temp, sum_lu = 0, sum_ld = 0, sum_r = 0;
-	cin >> n;
+	int n, *x, *y, temp; unsigned int sum = 0, sum_lu = 0, sum_ld = 0, sum_r = 0;
+	cin >> n; x = new int[n]; y = new int[n];
 	for (int i = 0; i < n; i++)
 	{
-		cin >> x >> y; if (x < y)
+		cin >> x[i] >> y[i]; if (x[i] < y[i])
 		{
-			temp = y; y = x; x = temp;
+			temp = y[i]; y[i] = x[i]; x[i] = temp;
 		}
-		for (int j = 2; j < y; j++)
-		{
-			sum += (2 * new_line(x, j, sum_lu, sum_ld, sum_r)) % max;
-		}
-		sum += x*x + y; cout << sum << endl; sum = 0; sum_lu = 0; sum_ld = 0; sum_r = 0;
 	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 2; j < y[i]; j++)
+		{
+			sum += (2 * new_line(x[i], j, sum_lu, sum_ld, sum_r)) % max;
+		}
+		sum += (x[i] * x[i] + y[i]) % max; cout << sum << endl; sum = 0; sum_lu = 0; sum_ld = 0; sum_r = 0;
+	}
+	delete[] x; delete[] y;
 }
