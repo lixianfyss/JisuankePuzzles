@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gridLineNum", "gridLineNum\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bottleSwap", "bottleSwap\bottleSwap.vcxproj", "{D7AF2761-EB55-4CA7-BF3B-66AC25EC3065}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cannotPay_Min", "cannotPay_Min\cannotPay_Min.vcxproj", "{70D53891-7CAA-4348-90C7-72C23782002C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "digitFibb", "digitFibb\digitFibb.vcxproj", "{6A0402AC-8891-4D39-AB0E-BD4E440B1C17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +35,18 @@ Global
 		{D7AF2761-EB55-4CA7-BF3B-66AC25EC3065}.Release|x64.Build.0 = Release|x64
 		{D7AF2761-EB55-4CA7-BF3B-66AC25EC3065}.Release|x86.ActiveCfg = Release|Win32
 		{D7AF2761-EB55-4CA7-BF3B-66AC25EC3065}.Release|x86.Build.0 = Release|Win32
+		{70D53891-7CAA-4348-90C7-72C23782002C}.Debug|x64.ActiveCfg = Debug|Win32
+		{70D53891-7CAA-4348-90C7-72C23782002C}.Debug|x86.ActiveCfg = Debug|Win32
+		{70D53891-7CAA-4348-90C7-72C23782002C}.Debug|x86.Build.0 = Debug|Win32
+		{70D53891-7CAA-4348-90C7-72C23782002C}.Release|x64.ActiveCfg = Release|Win32
+		{70D53891-7CAA-4348-90C7-72C23782002C}.Release|x86.ActiveCfg = Release|Win32
+		{70D53891-7CAA-4348-90C7-72C23782002C}.Release|x86.Build.0 = Release|Win32
+		{6A0402AC-8891-4D39-AB0E-BD4E440B1C17}.Debug|x64.ActiveCfg = Debug|Win32
+		{6A0402AC-8891-4D39-AB0E-BD4E440B1C17}.Debug|x86.ActiveCfg = Debug|Win32
+		{6A0402AC-8891-4D39-AB0E-BD4E440B1C17}.Debug|x86.Build.0 = Debug|Win32
+		{6A0402AC-8891-4D39-AB0E-BD4E440B1C17}.Release|x64.ActiveCfg = Release|Win32
+		{6A0402AC-8891-4D39-AB0E-BD4E440B1C17}.Release|x86.ActiveCfg = Release|Win32
+		{6A0402AC-8891-4D39-AB0E-BD4E440B1C17}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
